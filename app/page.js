@@ -53,7 +53,7 @@ export default function TestAnsia() {
     <div className="max-w-xl mx-auto p-6 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-md">
       {!risultato ? (
         <>
-          <h2 className="text-xl font-semibold mb-4">Test sull'Ansia</h2>
+          <h2 className="text-xl font-semibold mb-4">{`Test sull'Ansia`}</h2>
           <p className="mb-4">{domande[indiceAttuale]}</p>
           <div className="flex justify-between">
             {[1, 2, 3, 4, 5].map((num) => (
@@ -71,9 +71,9 @@ export default function TestAnsia() {
       ) : (
         <>
           <h2 className="text-xl font-semibold mb-4">Risultato: {risultato}</h2>
-          {risultato === "VERDE" && <p>Gestisci molto bene questo aspetto e sei emotivamente equilibrato(a). Potrai essere di grande aiuto ad altre persone che necessitano sostegno.</p>}
-          {risultato === "GIALLO" && <p>Ci sono chiari segnali di difficoltà emotive che richiedono attenzione e che, con determinazione e aiuto, possono essere superati.</p>}
-          {risultato === "ROSSO" && <p>I tuoi problemi emotivi legati a questo tema richiedono necessariamente l'intervento di un professionista. Ti consigliamo di cercare rapidamente l'aiuto di un medico o psicologo.</p>}
+          {risultato === "VERDE" && <p>{`Gestisci molto bene questo aspetto e sei emotivamente equilibrato(a). Potrai essere di grande aiuto ad altre persone che necessitano sostegno.`}</p>}
+          {risultato === "GIALLO" && <p>{`Ci sono chiari segnali di difficoltà emotive che richiedono attenzione e che, con determinazione e aiuto, possono essere superati.`}</p>}
+          {risultato === "ROSSO" && <p>{`I tuoi problemi emotivi legati a questo tema richiedono necessariamente l'intervento di un professionista. Ti consigliamo di cercare rapidamente l'aiuto di un medico o psicologo.`}</p>}
           <button
             className="mt-4 px-4 py-2 bg-green-500 dark:bg-green-600 text-white rounded hover:bg-green-600 dark:hover:bg-green-700"
             onClick={riavviaTest}

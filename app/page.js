@@ -1,4 +1,6 @@
 "use client";
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
 
 import { useState } from 'react';
 

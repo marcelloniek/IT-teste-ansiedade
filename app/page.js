@@ -70,16 +70,35 @@ export default function TestAnsia() {
         </>
       ) : (
         <>
-          <h2 className="text-xl font-semibold mb-4">Risultato: {risultato}</h2>
-          {risultato === "VERDE" && <p>{`Gestisci molto bene questo aspetto e sei emotivamente equilibrato(a). Potrai essere di grande aiuto ad altre persone che necessitano sostegno.`}</p>}
-          {risultato === "GIALLO" && <p>{`Ci sono chiari segnali di difficoltà emotive che richiedono attenzione e che, con determinazione e aiuto, possono essere superati.`}</p>}
-          {risultato === "ROSSO" && <p>{`I tuoi problemi emotivi legati a questo tema richiedono necessariamente l'intervento di un professionista. Ti consigliamo di cercare rapidamente l'aiuto di un medico o psicologo.`}</p>}
+          
+          <h2 className="text-xl font-semibold mb-4 text-center">Risultato: {risultato}</h2>
+          <img
+            src={
+              risultato === "VERDE"
+                ? "/images/semaforo-verde.png"
+                : risultato === "GIALLO"
+                ? "/images/semaforo-amarelo.png"
+                : "/images/semaforo-vermelho.png"
+            }
+            alt={`Semaforo: ${risultato}`}
+            className="w-40 h-auto mx-auto mb-4"
+          />
+          {risultato === "VERDE" && (
+            <p className="text-center">Gestisci molto bene questo aspetto e sei emotivamente equilibrato(a). Potrai essere di grande aiuto ad altre persone che necessitano sostegno.</p>
+          )}
+          {risultato === "GIALLO" && (
+            <p className="text-center">Ci sono chiari segnali di difficoltà emotive che richiedono attenzione e che, con determinazione e aiuto, possono essere superati.</p>
+          )}
+          {risultato === "ROSSO" && (
+            <p className="text-center">I tuoi problemi emotivi legati a questo tema richiedono necessariamente l'intervento di un professionista. Ti consigliamo di cercare rapidamente l'aiuto di un medico o psicologo.</p>
+          )}
           <button
-            className="mt-4 px-4 py-2 bg-green-500 dark:bg-green-600 text-white rounded hover:bg-green-600 dark:hover:bg-green-700"
+            className="mt-6 px-4 py-2 bg-green-500 dark:bg-green-600 text-white rounded hover:bg-green-600 dark:hover:bg-green-700 block mx-auto"
             onClick={riavviaTest}
           >
             Ripeti il test
           </button>
+    
         </>
       )}
     </div>
